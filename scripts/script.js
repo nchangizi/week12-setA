@@ -23,3 +23,12 @@ function changeText() {
   }
 }
 buttonRef.addEventListener("click", changeText);
+
+function updateImage() {
+  const image = document.querySelector("#shoppingCart");
+  image.setAttribute("src", "images/shopping-cart.png");
+  image.setAttribute("width", 50);
+  image.setAttribute("height", 50);
+  image.setAttribute("alt", "shopping cart icon");
+}
+buttonRef.addEventListener("click", updateImage);
