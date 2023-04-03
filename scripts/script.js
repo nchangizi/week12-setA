@@ -1,4 +1,15 @@
-// let buttonRef = document.querySelector("#clickMe");
+let buttonRef = document.querySelector("#clickMe");
+
+function addNewButtonAndPara() {
+  let newButton = document.createElement("button");
+  //the parent? document.body
+  //the child? newButton
+  document.body.appendChild(newButton);
+  newButton.textContent = "purple";
+  newButton.addEventListener("mouseover", changeBGGreen);
+  newButton.addEventListener("click", changeTextColor);
+}
+buttonRef.addEventListener("click", addNewButtonAndPara);
 
 // function alertUser() {
 //   alert("You Clicked!!!");
@@ -49,7 +60,7 @@ buttonContainer.addEventListener("mouseover", changeBGGreen);
 
 function changeTextColor(event) {
   //event.target -> button
-  console.log(event)
+  console.log(event);
   // if the text on the button says red -> the text color should be red
   if (event.target.tagName === "BUTTON") {
     let myColor = event.target.textContent;
